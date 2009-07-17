@@ -1,0 +1,2 @@
+class Spouse < PersonReference
+end

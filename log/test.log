@@ -1,0 +1,104 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.3ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateFamilyTrees (20090716075306)
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateFamilyTrees (20090716075306)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateFamilyTrees (20090716075306)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "family_trees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "version" varchar(255), "status_message" varchar(255), "status_code" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090716075306')[0m
+Migrating to CreatePeople (20090716075908)
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateFamilyTrees (20090716075306)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "family_trees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "version" varchar(255), "status_message" varchar(255), "status_code" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090716075306')[0m
+Migrating to CreatePeople (20090716075908)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "familytree_id" integer, "ind" varchar(255), "modified" varchar(255), "requested_id" varchar(255), "version" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090716075908')[0m
+Migrating to CreatePersonInformations (20090716080849)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateFamilyTrees (20090716075306)
+Migrating to CreatePeople (20090716075908)
+Migrating to CreatePersonInformations (20090716080849)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "person_informations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "person_id" integer, "gender" varchar(255), "living" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090716080849')[0m
+Migrating to CreateAlternateIds (20090716081207)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "alternate_ids" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "person_information_id" integer, "ind" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090716081207')[0m
+Migrating to CreateAssertions (20090716082637)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "assertions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "ind" varchar(255), "version" varchar(255), "submitter" varchar(255), "modified" datetime, "modifiable" boolean, "disputing" boolean, "contributor" varchar(255), "tempId" varchar(255), "person_id" integer, "event_type" varchar(255), "event_scope" varchar(255), "title" varchar(255), "fact_type" varchar(255), "fact_scope" varchar(255), "detail" varchar(255), "value" varchar(255), "name_type" varchar(255), "rel_scope" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090716082637')[0m
+Migrating to CreateNameForms (20090716084021)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "name_forms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "assertion_id" integer, "fullText" varchar(255), "script" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090716084021')[0m
+Migrating to CreateNamePieces (20090716084504)
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "name_pieces" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name_form_id" integer, "name_piece_type" varchar(255), "value" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090716084504')[0m
+Migrating to CreatePersonReferences (20090716084907)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "person_references" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "assertion_id" integer, "type" varchar(255), "role" varchar(255), "ref" varchar(255), "tempId" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090716084907')[0m
+Migrating to CreateDats (20090716085158)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "dats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "event_id" integer, "fact_id" integer, "original" varchar(255), "normalized" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090716085158')[0m
+Migrating to CreateDateAstros (20090716085424)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "date_astros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "dat_id" integer, "earliest" integer, "latest" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090716085424')[0m
+Migrating to CreatePlaces (20090716085630)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "places" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "event_id" integer, "fact_id" integer, "original" varchar(255), "normalized" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090716085630')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("alternate_ids")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("assertions")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("date_astros")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("dats")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("family_trees")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("name_forms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("name_pieces")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("people")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("person_informations")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("person_references")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("places")[0m

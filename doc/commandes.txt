@@ -1,0 +1,11 @@
+./script/generate rspec_model FamilyTree version:string, status_message:string, status_code:string
+./script/generate rspec_model Person familytree_id:int, ind:string, modified:string, requested_id:string, version:string
+./script/generate rspec_model PersonInformation person_id:int, gender:string, living:boolean
+./script/generate rspec_model AlternateId person_information_id:int, ind:string
+./script/generate rspec_model Assertion type:string, ind:string, version:string, submitter:string, modified:datetime, modifiable:boolean, disputing:boolean, contributor:string, tempId:string, person_id:int, event_type:string, event_scope:string, title:string, fact_type:string, fact_scope:string, title:string, detail:string, value:string, name_type:string, rel_scope:string
+./script/generate rspec_model NameForm assertion_id:int, fullText:string, script:string
+./script/generate rspec_model NamePiece name_form_id:int, name_piece_type:string, value:string
+./script/generate rspec_model PersonReference assertion_id:int, type:string, role:string, ref:string, tempId:string
+./script/generate rspec_model Dat event_id:int, fact_id:int, original:string, normalized:string
+./script/generate rspec_model DateAstro dat_id:int, earliest:integer, latest:integer
+./script/generate rspec_model Place event_id:int, fact_id:int, original:string, normalized:string

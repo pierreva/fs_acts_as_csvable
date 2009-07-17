@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name_form_id: 
+  name_piece_type: 
+  value: MyString
+
+two:
+  name_form_id: 
+  name_piece_type: 
+  value: MyString

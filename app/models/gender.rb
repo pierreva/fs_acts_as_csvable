@@ -1,0 +1,3 @@
+class Gender < Assertion
+
+end

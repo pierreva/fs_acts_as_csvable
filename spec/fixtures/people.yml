@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  familytree_id: 
+  ind: 
+  modified: 
+  requested_id: 
+  version: MyString
+
+two:
+  familytree_id: 
+  ind: 
+  modified: 
+  requested_id: 
+  version: MyString

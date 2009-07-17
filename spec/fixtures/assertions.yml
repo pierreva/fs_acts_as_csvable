@@ -1,0 +1,45 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  type: 
+  ind: 
+  version: 
+  submitter: 
+  modified: 
+  modifiable: 
+  disputing: 
+  contributor: 
+  tempId: 
+  person_id: 
+  event_type: 
+  event_scope: 
+  title: 
+  fact_type: 
+  fact_scope: 
+  title: 
+  detail: 
+  value: 
+  name_type: 
+  rel_scope: MyString
+
+two:
+  type: 
+  ind: 
+  version: 
+  submitter: 
+  modified: 
+  modifiable: 
+  disputing: 
+  contributor: 
+  tempId: 
+  person_id: 
+  event_type: 
+  event_scope: 
+  title: 
+  fact_type: 
+  fact_scope: 
+  title: 
+  detail: 
+  value: 
+  name_type: 
+  rel_scope: MyString

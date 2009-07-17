@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  person_information_id: 
+  ind: MyString
+
+two:
+  person_information_id: 
+  ind: MyString

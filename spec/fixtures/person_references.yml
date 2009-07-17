@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  assertion_id: 
+  type: 
+  role: 
+  ref: 
+  tempId: MyString
+
+two:
+  assertion_id: 
+  type: 
+  role: 
+  ref: 
+  tempId: MyString

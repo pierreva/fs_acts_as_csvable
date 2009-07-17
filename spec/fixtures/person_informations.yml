@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  person_id: 
+  gender: 
+  living: false
+
+two:
+  person_id: 
+  gender: 
+  living: false

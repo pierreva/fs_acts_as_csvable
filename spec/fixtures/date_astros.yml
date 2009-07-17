@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  dat_id: 
+  earliest: 
+  latest: 1
+
+two:
+  dat_id: 
+  earliest: 
+  latest: 1
